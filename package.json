@@ -1,0 +1,55 @@
+{
+  "name": "resume-ai-rag",
+  "version": "1.0.0",
+  "description": "Enterprise-grade RAG-based Resume Search API with BM25, Vector Search, and LLM re-ranking",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest --forceExit --detectOpenHandles",
+    "test:unit": "jest --testPathPattern=unit --forceExit",
+    "test:integration": "jest --testPathPattern=integration --forceExit",
+    "test:coverage": "jest --coverage --forceExit",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "rag",
+    "resume",
+    "search",
+    "ai",
+    "mongodb",
+    "vector-search"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/mongoose": "^5.11.96",
+    "@types/multer": "^2.2.0",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.0",
+    "mongodb": "^6.8.0",
+    "mongoose": "^9.7.4",
+    "multer": "^2.2.0",
+    "pdf-parse": "^1.1.1",
+    "pino": "^9.3.0",
+    "pino-pretty": "^11.2.0",
+    "uuid": "^11.0.0",
+    "winston": "^3.19.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.14.0",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/supertest": "^6.0.0",
+    "@types/uuid": "^10.0.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.0"
+  }
+}
